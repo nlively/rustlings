@@ -1,4 +1,15 @@
 fn factorial(num: u64) -> u64 {
+    // ultimate solution
+    (2..=num).product()
+
+    // second solution
+    // #[allow(clippy::unnecessary_fold)]
+    // (2..=num).fold(1, |acc, n| acc*n)
+
+    // first solution
+    // if num == 0 { return 1; }
+    // (1..num+1).reduce(|acc, i| acc * i ).unwrap()
+
     // TODO: Complete this function to return the factorial of `num` which is
     // defined as `1 * 2 * 3 * … * num`.
     // https://en.wikipedia.org/wiki/Factorial
